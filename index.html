@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeSaver Micro Lending Business — Fast Loans, Fair Terms</title>
+    <meta name="description" content="LifeSaver Micro Lending Business provides affordable micro-credit solutions for individuals and small businesses across Liberia. Fast Loans, Fair Terms.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --green-900: #064e1e;
+            --green-800: #0a6b2a;
+            --green-700: #0e8c38;
+            --green-600: #12a845;
+            --green-500: #1ab94f;
+            --green-400: #3dd06a;
+            --green-300: #6ade8c;
+            --green-200: #a3edb7;
+            --green-100: #d4f7de;
+            --green-50: #edfcf2;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --gold: #d4a843;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,.07), 0 2px 4px -2px rgba(0,0,0,.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.08), 0 4px 6px -4px rgba(0,0,0,.04);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,.08), 0 8px 10px -6px rgba(0,0,0,.04);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ── Typography ── */
+        .font-display { font-family: 'Playfair Display', serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+        
+        /* ── Utility ── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-pad { padding: 100px 0; }
+        .text-green { color: var(--green-700); }
+        .text-gold { color: var(--gold); }
+        .bg-green { background: var(--green-700); }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 32px; border-radius: 50px; font-weight: 600;
+            font-size: 15px; text-decoration: none; transition: all .3s ease;
+            cursor: pointer; border: none; font-family: inherit;
+        }
+        .btn-primary {
+            background: var(--green-700); color: var(--white);
+            box-shadow: 0 4px 14px rgba(14,140,56,.35);
+        }
+        .btn-primary:hover { background: var(--green-800); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(14,140,56,.4); }
+        .btn-outline {
+            background: transparent; color: var(--white);
+            border: 2px solid rgba(255,255,255,.5);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,.15); border-color: var(--white); }
+        .btn-white {
+            background: var(--white); color: var(--green-800);
+        }
+        .btn-white:hover { background: var(--green-50); transform: translateY(-2px); }
+
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 13px; font-weight: 600; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--green-600);
+            margin-bottom: 16px;
+        }
+        .section-label i { font-size: 10px; }
+        .section-title { font-size: clamp(32px, 5vw, 48px); color: var(--gray-900); margin-bottom: 20px; }
+        .section-subtitle { font-size: 18px; color: var(--gray-500); max-width: 600px; line-height: 1.7; }
+
+        /* ── Navigation ── */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 16px 0;
+            transition: all .4s ease;
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(255,255,255,.97);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-md);
+            padding: 10px 0;
+        }
+        .navbar .container {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 12px;
+            text-decoration: none;
+        }
+        .nav-logo-img { height: 44px; width: auto; border-radius: 8px; background: var(--white); padding: 3px; }
+
+        .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; font-size: 15px; font-weight: 500;
+            color: rgba(255,255,255,.85); transition: color .3s;
+        }
+        .nav-links a:hover { color: var(--white); }
+        .navbar.scrolled .nav-links a { color: var(--gray-600); }
+        .navbar.scrolled .nav-links a:hover { color: var(--green-700); }
+
+        .nav-cta {
+            padding: 10px 24px; border-radius: 50px; font-weight: 600;
+            font-size: 14px; text-decoration: none; transition: all .3s;
+            background: var(--white); color: var(--green-800);
+        }
+        .nav-cta:hover { background: var(--green-50); transform: translateY(-1px); }
+        .navbar.scrolled .nav-cta { background: var(--green-700); color: var(--white); }
+        .navbar.scrolled .nav-cta:hover { background: var(--green-800); }
+
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px; cursor: pointer;
+            background: none; border: none; padding: 4px;
+        }
+        .hamburger span {
+            width: 24px; height: 2px; background: var(--white);
+            transition: all .3s; border-radius: 2px;
+        }
+        .navbar.scrolled .hamburger span { background: var(--gray-800); }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative; min-height: 100vh;
+            display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 50%, #0a7832 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+            height: 120px;
+            background: linear-gradient(to top, var(--white), transparent);
+        }
+        .hero-content {
+            position: relative; z-index: 2;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+            padding: 120px 0 100px;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+            padding: 8px 20px; border-radius: 50px; font-size: 13px;
+            font-weight: 500; color: var(--green-200); margin-bottom: 28px;
+            backdrop-filter: blur(10px);
+        }
+        .hero-badge i { color: var(--gold); }
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 64px); color: var(--white);
+            margin-bottom: 24px; letter-spacing: -0.5px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--green-200), var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-desc {
+            font-size: 18px; color: rgba(255,255,255,.75);
+            line-height: 1.8; margin-bottom: 40px; max-width: 520px;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-stats {
+            display: flex; gap: 48px; margin-top: 48px;
+            padding-top: 32px; border-top: 1px solid rgba(255,255,255,.15);
+        }
+        .hero-stat-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: var(--white); }
+        .hero-stat-label { font-size: 14px; color: rgba(255,255,255,.6); margin-top: 4px; }
+        .hero-image {
+            position: relative; display: flex; justify-content: center; align-items: center;
+        }
+        .hero-image img {
+            width: 100%; max-width: 500px; border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,.3);
+            object-fit: cover; aspect-ratio: 4/5;
+        }
+        .hero-float-card {
+            position: absolute; background: rgba(255,255,255,.95);
+            backdrop-filter: blur(20px); border-radius: 16px; padding: 20px 24px;
+            box-shadow: var(--shadow-xl); display: flex; align-items: center; gap: 14px;
+        }
+        .hero-float-card.top-right {
+            top: 20px; right: -20px;
+        }
+        .hero-float-card.bottom-left {
+            bottom: 40px; left: -30px;
+        }
+        .float-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+        }
+        .float-icon.green { background: var(--green-100); color: var(--green-700); }
+        .float-icon.gold { background: #fef3cd; color: var(--gold); }
+        .float-label { font-size: 12px; color: var(--gray-500); }
+        .float-value { font-size: 16px; font-weight: 700; color: var(--gray-900); }
+
+        /* ── About ── */
+        .about { background: var(--white); }
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .about-images {
+            position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .about-images img {
+            width: 100%; border-radius: 16px; object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+        .about-images img:first-child { aspect-ratio: 3/4; grid-row: span 2; }
+        .about-images img:nth-child(2) { aspect-ratio: 1/1; }
+        .about-images img:nth-child(3) { aspect-ratio: 1/1; }
+        .about-text p {
+            font-size: 17px; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px;
+        }
+        .about-features {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+            margin-top: 36px;
+        }
+        .about-feature {
+            display: flex; align-items: flex-start; gap: 14px;
+        }
+        .about-feature-icon {
+            width: 40px; height: 40px; min-width: 40px; border-radius: 10px;
+            background: var(--green-50); color: var(--green-700);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+        }
+        .about-feature h4 { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--gray-800); }
+        .about-feature p { font-size: 13px; color: var(--gray-500); margin-top: 2px; line-height: 1.5; }
+
+        /* ── Services ── */
+        .services { background: var(--gray-50); }
+        .services-header { text-align: center; margin-bottom: 64px; }
+        .services-header .section-subtitle { margin: 0 auto; }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .service-card {
+            background: var(--white); border-radius: 20px; padding: 40px 32px;
+            border: 1px solid var(--gray-100);
+            transition: all .4s ease; position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--green-500), var(--green-300));
+            opacity: 0; transition: opacity .4s;
+        }
+        .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: transparent; }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; margin-bottom: 24px;
+            background: var(--green-50); color: var(--green-700);
+            transition: all .4s;
+        }
+        .service-card:hover .service-icon { background: var(--green-700); color: var(--white); }
+        .service-card h3 { font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--gray-900); }
+        .service-card p { font-size: 15px; color: var(--gray-500); line-height: 1.7; }
+
+        /* ── Process / How It Works ── */
+        .process { background: var(--white); }
+        .process-header { text-align: center; margin-bottom: 64px; }
+        .process-header .section-subtitle { margin: 0 auto; }
+        .process-steps {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: ''; position: absolute; top: 48px; left: 12%; right: 12%;
+            height: 2px; background: var(--green-100);
+        }
+        .process-step { text-align: center; position: relative; }
+        .process-num {
+            width: 96px; height: 96px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 24px;
+            background: var(--green-50);
+            border: 3px solid var(--green-200);
+            font-family: 'Playfair Display', serif;
+            font-size: 32px; font-weight: 700; color: var(--green-700);
+            position: relative; z-index: 2;
+            transition: all .4s;
+        }
+        .process-step:hover .process-num {
+            background: var(--green-700); color: var(--white); border-color: var(--green-700);
+            transform: scale(1.08);
+        }
+        .process-step h3 { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; }
+        .process-step p { font-size: 14px; color: var(--gray-500); line-height: 1.6; padding: 0 8px; }
+
+        /* ── Team ── */
+        .team { background: var(--gray-50); }
+        .team-header { text-align: center; margin-bottom: 64px; }
+        .team-header .section-subtitle { margin: 0 auto; }
+        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .team-card {
+            background: var(--white); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--gray-100); transition: all .4s;
+        }
+        .team-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: transparent; }
+        .team-card-img {
+            width: 100%; aspect-ratio: 3/4; object-fit: cover;
+            object-position: top center;
+        }
+        .team-card-body { padding: 28px; text-align: center; }
+        .team-card-body h3 { font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--gray-900); }
+        .team-card-body .role {
+            font-size: 14px; color: var(--green-600); font-weight: 500;
+            margin-top: 4px; margin-bottom: 12px;
+        }
+        .team-card-body p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+        .team-socials {
+            display: flex; gap: 10px; justify-content: center; margin-top: 16px;
+        }
+        .team-socials a {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: var(--gray-100); display: flex; align-items: center; justify-content: center;
+            color: var(--gray-500); font-size: 14px; text-decoration: none;
+            transition: all .3s;
+        }
+        .team-socials a:hover { background: var(--green-700); color: var(--white); }
+
+        /* ── Gallery ── */
+        .gallery { background: var(--white); }
+        .gallery-header { text-align: center; margin-bottom: 64px; }
+        .gallery-header .section-subtitle { margin: 0 auto; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            gap: 16px;
+        }
+        .gallery-item {
+            border-radius: 16px; overflow: hidden;
+            position: relative; cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            object-position: top center;
+            transition: transform .6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-item::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.4), transparent);
+            opacity: 0; transition: opacity .4s;
+        }
+        .gallery-item:hover::after { opacity: 1; }
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .gallery-item:nth-child(1) img { aspect-ratio: 1/1; }
+        .gallery-item:not(:first-child) img { aspect-ratio: 4/3; }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--green-900), var(--green-700));
+            position: relative; overflow: hidden;
+        }
+        .cta-banner::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .cta-banner .container {
+            position: relative; z-index: 2;
+            text-align: center; padding: 80px 24px;
+        }
+        .cta-banner h2 { color: var(--white); font-size: clamp(28px, 4vw, 44px); margin-bottom: 20px; }
+        .cta-banner p { color: rgba(255,255,255,.7); font-size: 18px; margin-bottom: 36px; max-width: 550px; margin-left: auto; margin-right: auto; }
+        .cta-banner .btn-white { font-size: 16px; padding: 16px 40px; }
+
+        /* ── Contact ── */
+        .contact { background: var(--gray-50); }
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px;
+        }
+        .contact-info-item {
+            display: flex; gap: 16px; margin-bottom: 32px;
+        }
+        .contact-info-icon {
+            width: 52px; height: 52px; min-width: 52px; border-radius: 14px;
+            background: var(--green-50); color: var(--green-700);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+        }
+        .contact-info-item h4 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+        .contact-info-item p { font-size: 15px; color: var(--gray-500); line-height: 1.6; }
+        .contact-info-item a { color: var(--green-700); text-decoration: none; }
+        .contact-info-item a:hover { text-decoration: underline; }
+
+        .contact-socials { display: flex; gap: 12px; margin-top: 12px; }
+        .contact-socials a {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--green-700); color: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; text-decoration: none; transition: all .3s;
+        }
+        .contact-socials a:hover { background: var(--green-800); transform: translateY(-3px); }
+
+        .contact-form {
+            background: var(--white); border-radius: 24px; padding: 44px;
+            box-shadow: var(--shadow-lg); border: 1px solid var(--gray-100);
+        }
+        .contact-form h3 { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+        .contact-form > p { font-size: 15px; color: var(--gray-500); margin-bottom: 28px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 14px; font-weight: 500;
+            color: var(--gray-700); margin-bottom: 6px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 12px 16px; border: 1.5px solid var(--gray-200);
+            border-radius: 12px; font-family: inherit; font-size: 15px;
+            transition: all .3s; background: var(--gray-50);
+            color: var(--gray-800);
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--green-500);
+            box-shadow: 0 0 0 3px rgba(26,185,79,.12);
+            background: var(--white);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .contact-form .btn { width: 100%; justify-content: center; font-size: 16px; padding: 16px; }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--gray-900); color: rgba(255,255,255,.6);
+            padding: 72px 0 0;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+        .footer-brand p { margin-top: 16px; font-size: 15px; line-height: 1.7; }
+        .footer-logo {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 4px;
+        }
+        .footer-logo-img { height: 40px; width: auto; border-radius: 8px; background: var(--white); padding: 3px; }
+        .footer h4 {
+            font-family: 'DM Sans', sans-serif; font-size: 15px;
+            font-weight: 600; color: var(--white);
+            margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+        .footer ul a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 15px; transition: color .3s; }
+        .footer ul a:hover { color: var(--green-400); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 24px 0; font-size: 14px;
+        }
+        .footer-bottom-links { display: flex; gap: 24px; }
+        .footer-bottom-links a { color: rgba(255,255,255,.5); text-decoration: none; font-size: 14px; transition: color .3s; }
+        .footer-bottom-links a:hover { color: var(--green-400); }
+
+        /* ── Lightbox ── */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(0,0,0,.92); display: none;
+            align-items: center; justify-content: center;
+            opacity: 0; transition: opacity .3s;
+        }
+        .lightbox.active { display: flex; opacity: 1; }
+        .lightbox img {
+            max-width: 90vw; max-height: 85vh; border-radius: 12px;
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute; top: 24px; right: 24px;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: rgba(255,255,255,.15); border: none;
+            color: var(--white); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all .3s;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,.25); }
+
+        /* ── Mobile Nav ── */
+        .mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 9998;
+            background: var(--green-900); padding: 100px 32px 32px;
+            flex-direction: column; gap: 0;
+            transform: translateX(100%); transition: transform .4s ease;
+        }
+        .mobile-menu.active { display: flex; transform: translateX(0); }
+        .mobile-menu a {
+            display: block; padding: 16px 0; font-size: 20px;
+            color: rgba(255,255,255,.9); text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            font-weight: 500;
+        }
+        .mobile-menu a:hover { color: var(--green-300); }
+
+        /* ── Animations ── */
+        .fade-in {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-in.delay-1 { transition-delay: .1s; }
+        .fade-in.delay-2 { transition-delay: .2s; }
+        .fade-in.delay-3 { transition-delay: .3s; }
+        .fade-in.delay-4 { transition-delay: .35s; }
+
+        /* ── Testimonials ── */
+        .testimonials { background: var(--gray-50); }
+        .testimonials-header { text-align: center; margin-bottom: 64px; }
+        .testimonials-header .section-subtitle { margin: 0 auto; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .testimonial-card {
+            background: var(--white); border-radius: 20px; padding: 36px;
+            box-shadow: var(--shadow-md); border: 1px solid var(--gray-200);
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '\201C'; font-family: 'Playfair Display', serif;
+            font-size: 80px; color: var(--green-200); line-height: 1;
+            position: absolute; top: 12px; left: 24px;
+        }
+        .testimonial-stars { color: var(--gold); margin-bottom: 20px; font-size: 14px; }
+        .testimonial-text { font-size: 15px; color: var(--gray-600); line-height: 1.8; margin-bottom: 28px; position: relative; z-index: 1; }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; }
+        .testimonial-avatar {
+            width: 48px; height: 48px; border-radius: 50%; background: var(--green-100);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: var(--green-700); font-weight: 700;
+            font-family: 'Playfair Display', serif; flex-shrink: 0;
+        }
+        .testimonial-author-info h5 { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 2px; }
+        .testimonial-author-info span { font-size: 13px; color: var(--gray-500); }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-desc { margin: 0 auto 40px; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-image { order: -1; }
+            .hero-float-card { display: none; }
+            .about-grid { grid-template-columns: 1fr; gap: 48px; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .process-steps::before { display: none; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+            .gallery-item:nth-child(1) img { aspect-ratio: 16/9; }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-cta { display: none; }
+            .hamburger { display: flex; }
+            .section-pad { padding: 72px 0; }
+            .services-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .process-steps { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
+            .about-features { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-item:nth-child(1) { grid-column: span 2; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .contact-form { padding: 28px; }
+            .hero-stats { flex-wrap: wrap; gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="#" class="nav-logo">
+            <img class="nav-logo-img" src="images/logo.jpg" alt="LifeSaver Micro Lending Business Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Apply Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMobile()">Home</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#team" onclick="closeMobile()">Team</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div>
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Regulated by the Central Bank of Liberia
+                </div>
+                <h1>Fast Loans.<br><em>Fair Terms.</em></h1>
+                <p class="hero-desc">
+                    Empowering individuals, micro-entrepreneurs, and small businesses across 
+                    Liberia with responsible micro-credit solutions that strengthen livelihoods 
+                    and promote sustainable economic growth.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-white"><i class="fa-solid fa-paper-plane"></i> Apply for a Loan</a>
+                    <a href="#services" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Our Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-num">7+</div>
+                        <div class="hero-stat-label">Loan Products</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">24hr</div>
+                        <div class="hero-stat-label">Fast Processing</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">100%</div>
+                        <div class="hero-stat-label">Transparent Terms</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/team-laptops.jpg" alt="LifeSaver Micro Lending Team">
+                <div class="hero-float-card top-right">
+                    <div class="float-icon green"><i class="fa-solid fa-check-double"></i></div>
+                    <div>
+                        <div class="float-label">Approval</div>
+                        <div class="float-value">Quick &amp; Easy</div>
+                    </div>
+                </div>
+                <div class="hero-float-card bottom-left">
+                    <div class="float-icon gold"><i class="fa-solid fa-percent"></i></div>
+                    <div>
+                        <div class="float-label">Interest Rates</div>
+                        <div class="float-value">Competitive</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="about section-pad" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-images fade-in">
+                <img src="images/team-suits.jpg" alt="LifeSaver Team in professional attire">
+                <img src="images/team-closeup.jpg" alt="Team collaborating">
+                <img src="images/team-arms-crossed.jpg" alt="Team standing together">
+            </div>
+            <div class="about-text fade-in">
+                <div class="section-label"><i class="fa-solid fa-circle"></i> About Us</div>
+                <h2 class="section-title">Building Financial<br>Futures in <span class="text-green">Liberia</span></h2>
+                <p>
+                    Lifesaver Micro Lending Business Inc. is a registered microfinance institution 
+                    dedicated to expanding access to affordable financial services for individuals, 
+                    micro-entrepreneurs, and small businesses across Liberia.
+                </p>
+                <p>
+                    Operating in line with the regulatory framework of the Central Bank of Liberia, 
+                    we are committed to transparency, ethical lending, and financial inclusion. Our 
+                    services are tailored to meet the needs of underserved communities while empowering 
+                    clients to build resilience, grow their businesses, and improve their quality of life.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div>
+                            <h4>Ethical Lending</h4>
+                            <p>Transparent practices you can trust</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <div>
+                            <h4>Community First</h4>
+                            <p>Serving underserved communities</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-landmark"></i></div>
+                        <div>
+                            <h4>CBL Regulated</h4>
+                            <p>Central Bank of Liberia compliant</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div>
+                            <h4>Growth Focused</h4>
+                            <p>Empowering sustainable growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="services section-pad" id="services">
+    <div class="container">
+        <div class="services-header fade-in">
+            <div class="section-label"><i class="fa-solid fa-circle"></i> Our Services</div>
+            <h2 class="section-title">Financial Solutions<br>Tailored for <span class="text-green">You</span></h2>
+            <p class="section-subtitle">We offer a range of micro-credit solutions designed to support income-generating activities and strengthen livelihoods.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in delay-1">
+                <div class="service-icon"><i class="fa-solid fa-user"></i></div>
+                <h3>Personal Loans</h3>
+                <p>Individual loans tailored to meet your personal financial needs with flexible repayment terms and competitive rates.</p>
+            </div>
+            <div class="service-card fade-in delay-2">
+                <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Employee / Salary Loans</h3>
+                <p>Quick access to credit for salaried employees. Convenient repayment through salary deductions with fast approval.</p>
+            </div>
+            <div class="service-card fade-in delay-3">
+                <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+                <h3>Small Business Loans</h3>
+                <p>Working capital and growth financing for small businesses looking to expand operations and increase revenue.</p>
+            </div>
+            <div class="service-card fade-in delay-1">
+                <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h3>Entrepreneur Loans</h3>
+                <p>Startup and growth capital for micro-entrepreneurs with innovative ideas and the drive to succeed.</p>
+            </div>
+            <div class="service-card fade-in delay-2">
+                <div class="service-icon"><i class="fa-solid fa-car"></i></div>
+                <h3>Asset Acquisition Loans</h3>
+                <p>Finance the purchase of essential assets — vehicles, equipment, machinery — to help grow your business capacity.</p>
+            </div>
+            <div class="service-card fade-in delay-3">
+                <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>School Fees Loans</h3>
+                <p>Invest in education with our school fees financing. Ensure uninterrupted learning for your children and dependents.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="process section-pad" id="process">
+    <div class="container">
+        <div class="process-header fade-in">
+            <div class="section-label"><i class="fa-solid fa-circle"></i> How It Works</div>
+            <h2 class="section-title">Get Your Loan in<br><span class="text-green">4 Simple Steps</span></h2>
+            <p class="section-subtitle">Our streamlined process gets you the funds you need, fast.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step fade-in delay-1">
+                <div class="process-num">1</div>
+                <h3>Apply</h3>
+                <p>Visit our office or contact us to start your loan application. Bring your valid ID and required documents.</p>
+            </div>
+            <div class="process-step fade-in delay-2">
+                <div class="process-num">2</div>
+                <h3>Review</h3>
+                <p>Our credit team reviews your application and assesses eligibility based on fair and transparent criteria.</p>
+            </div>
+            <div class="process-step fade-in delay-3">
+                <div class="process-num">3</div>
+                <h3>Approve</h3>
+                <p>Once approved, you'll receive your loan agreement with clear terms — no hidden fees, no surprises.</p>
+            </div>
+            <div class="process-step fade-in delay-4">
+                <div class="process-num">4</div>
+                <h3>Receive</h3>
+                <p>Funds are disbursed quickly so you can put your money to work right away.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ TEAM ══════════ -->
+<section class="team section-pad" id="team">
+    <div class="container">
+        <div class="team-header fade-in">
+            <div class="section-label"><i class="fa-solid fa-circle"></i> Our Team</div>
+            <h2 class="section-title">Meet the People<br>Behind <span class="text-green">LifeSaver</span></h2>
+            <p class="section-subtitle">Experienced professionals committed to helping you achieve your financial goals.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card fade-in delay-1">
+                <img class="team-card-img" src="images/joseph-borlay.jpg" alt="Joseph S. Borlay - CEO">
+                <div class="team-card-body">
+                    <h3>Joseph S. Borlay</h3>
+                    <div class="role">Chief Executive Officer</div>
+                    <p>A dedicated accounting and finance professional with over 8 years of experience in financial reporting, budgeting, and strategic financial management.</p>
+                    <div class="team-socials">
+                        <a href="mailto:jsborlay117@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+231886595662" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card fade-in delay-2">
+                <img class="team-card-img" src="images/samuel-savey.jpg" alt="Samuel Savey - Credit Officer">
+                <div class="team-card-body">
+                    <h3>Samuel Savey</h3>
+                    <div class="role">Credit Officer</div>
+                    <p>A service-driven professional responsible for evaluating loan applications, maintaining client records, and ensuring responsible credit delivery.</p>
+                    <div class="team-socials">
+                        <a href="mailto:samuelsavey1738@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+231776250852" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card fade-in delay-3">
+                <img class="team-card-img" src="images/faith-borlay.jpg" alt="Faith P. Borlay - HR Manager">
+                <div class="team-card-body">
+                    <h3>Faith P. Borlay</h3>
+                    <div class="role">Human Resource Manager</div>
+                    <p>A disciplined and results-oriented professional with experience in administration, finance support, and business operations management.</p>
+                    <div class="team-socials">
+                        <a href="mailto:fpennie23@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+231777496353" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ GALLERY ══════════ -->
+<section class="gallery section-pad" id="gallery">
+    <div class="container">
+        <div class="gallery-header fade-in">
+            <div class="section-label"><i class="fa-solid fa-circle"></i> Gallery</div>
+            <h2 class="section-title">Our Team<br>in <span class="text-green">Action</span></h2>
+            <p class="section-subtitle">Professional moments captured with the LifeSaver family.</p>
+        </div>
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-work.jpg" alt="LifeSaver team working together">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-business.jpg" alt="Team in business attire">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-collab.jpg" alt="Team collaboration">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-standing.jpg" alt="Team standing together">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-laptop-view.jpg" alt="Team reviewing on laptop">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-tshirts-back.jpg" alt="Stop wishing, start doing">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-green.jpg" alt="Team in green uniforms">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/team-white-polo.jpg" alt="Team in white polos">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="testimonials section-pad" id="testimonials">
+    <div class="container">
+        <div class="testimonials-header fade-in">
+            <div class="section-label"><i class="fa-solid fa-circle"></i> Testimonials</div>
+            <h2 class="section-title">What Our <span class="text-green">Clients Say</span></h2>
+            <p class="section-subtitle">Real stories from real people whose lives have been transformed by LifeSaver's financial solutions.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in delay-1">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"LifeSaver helped me grow my small market business when no one else would. The process was fast, the terms were clear, and the team was always kind and supportive. I paid off my loan in time and have since expanded my shop."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div class="testimonial-author-info">
+                        <h5>Martha K. Johnson</h5>
+                        <span>Small Business Owner, Monrovia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in delay-2">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I used a salary loan from LifeSaver to pay my children's school fees during a difficult time. The repayment plan was flexible and fit perfectly with my monthly income. I highly recommend them to anyone in need."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">J</div>
+                    <div class="testimonial-author-info">
+                        <h5>James T. Freeman</h5>
+                        <span>Government Employee, Sinkor</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in delay-3">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I started with a small entrepreneur loan to buy a generator for my tailoring business. LifeSaver's interest rates are fair and the staff treated me with respect. My business has tripled since I got that first loan."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">R</div>
+                    <div class="testimonial-author-info">
+                        <h5>Rose Y. Kollie</h5>
+                        <span>Entrepreneur, Paynesville</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ CTA BANNER ══════════ -->
+<section class="cta-banner">
+    <div class="container">
+        <h2 class="font-display">Ready to Take the<br>Next Step?</h2>
+        <p>Whether you're starting a business, expanding, or need financial support — LifeSaver is here for you.</p>
+        <a href="#contact" class="btn btn-white"><i class="fa-solid fa-arrow-right"></i> Get Started Today</a>
+    </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact section-pad" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="fade-in">
+                <div class="section-label"><i class="fa-solid fa-circle"></i> Contact Us</div>
+                <h2 class="section-title">Let's Talk About<br>Your <span class="text-green">Future</span></h2>
+                <p class="section-subtitle" style="margin-bottom: 40px;">Visit our office or get in touch. We're here to help you find the right financial solution.</p>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4>Our Office</h4>
+                        <p>5th Street, Sinkor<br>Monrovia, Liberia</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+231886711000">+231 886-711-000</a><br><a href="tel:+231777700779">+231 777-700-779</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <p>Mon – Fri: 9:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:lifesavermlb@gmail.com">lifesavermlb@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-socials">
+                    <a href="https://www.facebook.com/share/18CHqm3v9S/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lsaver_micro26?igsh=cTJheml1aWR0bGtn&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/231777700779" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <h3>Send Us a Message</h3>
+                <p>Fill out the form below and we'll get back to you promptly.</p>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" placeholder="Your last name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+231 xxx-xxx-xxx">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service">
+                            <option value="">Select a service</option>
+                            <option>Personal Loan</option>
+                            <option>Employee / Salary Loan</option>
+                            <option>Small Business Loan</option>
+                            <option>Entrepreneur Loan</option>
+                            <option>Asset Acquisition Loan</option>
+                            <option>School Fees Loan</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us about your financial needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img class="footer-logo-img" src="images/logo.jpg" alt="LifeSaver Micro Lending Business Logo">
+                </div>
+                <p>A registered microfinance institution dedicated to expanding access to affordable financial services across Liberia. Fast Loans, Fair Terms.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Personal Loans</a></li>
+                    <li><a href="#services">Salary Loans</a></li>
+                    <li><a href="#services">Business Loans</a></li>
+                    <li><a href="#services">Entrepreneur Loans</a></li>
+                    <li><a href="#services">Asset Loans</a></li>
+                    <li><a href="#services">School Fees Loans</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+231886711000"><i class="fa-solid fa-phone" style="margin-right:8px;font-size:12px;"></i>+231 886-711-000</a></li>
+                    <li><a href="tel:+231777700779"><i class="fa-solid fa-phone" style="margin-right:8px;font-size:12px;"></i>+231 777-700-779</a></li>
+                    <li><a href="mailto:lifesavermlb@gmail.com"><i class="fa-solid fa-envelope" style="margin-right:8px;font-size:12px;"></i>lifesavermlb@gmail.com</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-location-dot" style="margin-right:8px;font-size:12px;"></i>5th Street, Sinkor</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lifesaver Micro Lending Business Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="https://www.facebook.com/share/18CHqm3v9S/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/lsaver_micro26?igsh=cTJheml1aWR0bGtn&utm_source=qr" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/231777700779" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img src="" alt="Gallery image" id="lightboxImg">
+</div>
+
+<script>
+    // ── Navbar scroll ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Mobile menu ──
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+    function closeMobile() {
+        mobileMenu.classList.remove('active');
+    }
+
+    // ── Scroll animation ──
+    const observerOpts = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, observerOpts);
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ── Lightbox ──
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    function openLightbox(el) {
+        lightboxImg.src = el.querySelector('img').src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // ── Form submit (static placeholder) ──
+    function handleSubmit(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
+        btn.style.background = '#059669';
+        setTimeout(() => {
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+            btn.style.background = '';
+            e.target.reset();
+        }, 3000);
+    }
+
+    // ── Smooth scroll for nav links ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
